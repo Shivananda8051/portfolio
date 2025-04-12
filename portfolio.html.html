@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .certification-grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .certification-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .certification-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #334155;
+            margin-bottom: 0.75rem;
+        }
+
+        .certification-issuer {
+            font-size: 1rem;
+            color: #4b5563;
+            margin-bottom: 0.5rem;
+        }
+
+        .certification-date {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+
+        .certification-link {
+            display: inline-flex;
+            align-items: center;
+            color: #3b82f6;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .certification-link:hover {
+            color: #2563eb;
+        }
+
+        .certification-link svg {
+            width: 1rem;
+            height: 1rem;
+            margin-left: 0.25rem;
+            stroke-width: 2;
+        }
+
+        /* Layout 2 Styles */
+        .certification-card.layout2 {
+            border-left: 4px solid #6366f1;
+            /* Purple accent */
+        }
+
+        .certification-title.layout2 {
+            color: #4338ca;
+        }
+
+        .certification-issuer.layout2 {
+            color: #6d28d9;
+        }
+
+        .certification-date.layout2 {
+            color: #8b5cf6;
+        }
+
+        .certification-link.layout2 {
+            color: #a855f7;
+        }
+
+        .certification-link.layout2:hover {
+            color: #7e22ce;
+        }
+
+        /* Layout 3 Styles */
+        .certification-card.layout3 {
+            background-color: #f0f9ff;
+            /* Light blue background */
+            border-top: 4px solid #22c55e;
+            /* Green accent */
+        }
+
+        .certification-title.layout3 {
+            color: #15803d;
+        }
+
+        .certification-issuer.layout3 {
+            color: #16a34a;
+        }
+
+        .certification-date.layout3 {
+            color: #34d399;
+        }
+
+        .certification-link.layout3 {
+            color: #06b646;
+        }
+
+        .certification-link.layout3:hover {
+            color: #057835;
+        }
+
+        .info-panel {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .info-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 1rem;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        .info-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 0.75rem;
+            color: #3b82f6;
+        }
+        .info-text {
+            font-size: 1rem;
+            color: #4b5563;
+        }
+        .info-link {
+            color: #3b82f6;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+        .info-link:hover {
+            color: #2563eb;
+        }
+
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <header
+        class="bg-blue-600 text-white py-4 flex justify-between items-center shadow-md sticky top-0 z-10 rounded-md">
+        <div class="logo text-xl font-bold ml-4">My Portfolio</div>
+        <nav class="mr-4">
+            <ul class="flex space-x-4">
+                <li><a href="#about" class="hover:text-blue-300 no-underline">About</a></li>
+                <li><a href="#projects" class="hover:text-blue-300 no-underline">Projects</a></li>
+                <li><a href="#contact" class="hover:text-blue-300 no-underline">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="container mx-auto py-10 px-4">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="md:w-1/2">
+                <img src="PRO.jpg" alt="Your Name" class="rounded-lg shadow-lg">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-semibold text-blue-700 mb-4">About Me</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Hello! I'm Shivananda Kupnoor, a passionate Full Stack Developer with a knack for creating
+                    amazing and impactful solutions. I specialize in front-end and back-end development, designing
+                    seamless user experiences, and developing efficient server-side logic. My goal is to use my skills
+                    to build innovative, scalable, and user-friendly applications that solve real-world problems.
+
+
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    I have a strong foundation in JavaScript, React, SQL and Node.js. I'm always eager to learn
+                    new technologies, expand my skillset, and take on challenging projects to continuously grow as a
+                    developer.
+                    <br> <br>
+                    YouTube Creator: <br>
+                    &nbsp; &nbsp; &nbsp; Animal Videos Channel: <br>
+                    &nbsp; &nbsp; &nbsp; Subscribers: 200K+ <br>
+                    - Created and managing a successful YouTube channel focused on animal-themed &nbsp; content,
+                    showcasing
+                    wildlife, pets, and heartwarming rescue stories.
+
+                    <br> <br>
+                    <button
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"><a
+                            href="https://drive.google.com/file/d/1DszuLFEaIMy66phwHIcf1Mz_E1FoVo2y/view?usp=drive_link">Resume</a></button>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="bg-gray-200 py-10 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-blue-700 mb-6 text-center">My Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 flex items-center gap-4">
+                    <i class="fab fa-html5 text-4xl text-orange-500"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800">HTML</h3>
+                        <p class="text-gray-600">Proficient in creating semantic and accessible web structures.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex items-center gap-4">
+                    <i class="fab fa-css3-alt text-4xl text-blue-500"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800">CSS</h3>
+                        <p class="text-gray-600">Skilled in designing visually appealing and responsive layouts.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex items-center gap-4">
+                    <i class="fab fa-js-square text-4xl text-yellow-500"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800">JavaScript</h3>
+                        <p class="text-gray-600">Experienced in building interactive and dynamic web applications.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex items-center gap-4">
+                    <i class="fab fa-react text-4xl text-cyan-500"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800">React</h3>
+                        <p class="text-gray-600">Capable of developing complex user interfaces with React.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex items-center gap-4">
+                    <i class="fab fa-node-js text-4xl text-green-500"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800">Node.js</h3>
+                        <p class="text-gray-600">Knowledgeable in server-side development using Node.js.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex items-center gap-4">
+                    <i class="fas fa-database text-4xl text-gray-700"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800">Database</h3>
+                        <p class="text-gray-600">Experience with database management systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="bg-gray-100 py-10 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-blue-700 mb-6 text-center">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Weather Prediction Website 🌦️</h3>
+                    <p class="text-gray-600 mb-4">This website dynamically predicts weather by fetching real-time data
+                        from a public API like OpenWeatherMap. Built with HTML, CSS, and JavaScript, it offers a
+                        responsive and user-friendly design.</p>
+                    <a href="https://remarkable-swan-906bea.netlify.app/" class="text-blue-500 hover:text-blue-700">View
+                        Project</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Lottery Game 🎲</h3>
+                    <p class="text-gray-600 mb-4">This lottery game incorporates a lucky number logic, allowing users to
+                        enjoy personalized or randomly generated numbers. Built with Reactjs, it ensures dynamic and
+                        engaging gameplay.</p>
+                    <a href="https://chimerical-crepe-7b96f3.netlify.app/"
+                        class="text-blue-500 hover:text-blue-700">View Project</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Rock-Paper-Scissors Game</h3>
+                    <p class="text-gray-600 mb-4">This is a simple Rock-Paper-Scissors game where players can test their
+                        skills against a computer opponent. Built with HTML, CSS, and JavaScript, it features quick
+                        gameplay and real-time results.</p>
+                    <a href="https://guileless-florentine-6965df.netlify.app/"
+                        class="text-blue-500 hover:text-blue-700">View Project</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Vulnerabilities Scanner</h3>
+                    <p class="text-gray-600 mb-4">This project is designed to identify and analyze potential security
+                        vulnerabilities in web applications. Built with Django for backend functionality and React.js
+                        for a dynamic front-end interface, it checks for CDN status, detects malware presence, and
+                        provides actionable recommendations to enhance security.</p>
+                    <a href="#" class="text-blue-500 hover:text-blue-700">Version 1 Done</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">EcoRoute </h3>
+                    <p class="text-gray-600 mb-4">EcoRoute is a web application built with HTML, CSS, and JavaScript to
+                        suggest eco-friendly routes with low carbon emissions. It includes a reward dashboard that
+                        tracks distance and incentivizes sustainable travel with points.</p>
+                    <a href="#" class="text-blue-500 hover:text-blue-700">View Project</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">GitMeet</h3>
+                    <p class="text-gray-600 mb-4">I am currently working on a full-stack real-time communication
+                        platform, built with WebRTC, to enable seamless video calls, screen sharing, and instant
+                        messaging. It utilizes Node.js and WebSocket for efficient backend data transmission, and
+                        React.js for a responsive, user-friendly interface, ensuring low latency and high-quality
+                        interactions.</p>
+                    <a href="#" class="text-blue-500 hover:text-blue-700">Currently Working</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto">
+        <h2 class="text-3xl font-semibold text-blue-700 mb-6 text-center">My Certifications</h2>
+        <div class="certification-grid-container">
+            <div class="certification-card layout1">
+                <h3 class="certification-title">React.js Internship </h3>
+                <p class="certification-issuer">By: Infosys</p>
+                <p class="certification-date">Date Issued: March 2025</p>
+                <a href="https://drive.google.com/file/d/1CwAB-S3oK3clldoFluEgUBDCBfMca2JA/view?usp=drive_link"
+                    class="certification-link">
+                    View Certification
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+            <div class="certification-card layout2">
+                <h3 class="certification-title layout2">Smart India Hackathon</h3>
+                <p class="certification-issuer layout2">By : GITAM</p>
+                <p class="certification-date layout2">Date Issued: september 2024</p>
+                <a href="#" class="certification-link layout2">
+                    View Certification
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+    </section>
+
+    <section class="container mx-auto">
+        <h2 class="text-3xl font-semibold text-blue-700 mb-6 text-center">My Contact Information</h2>
+        <div class="info-panel">
+            <h3 class="info-title">Contact Details</h3>
+            <div class="info-item">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="info-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 20v-6m4 6v-6m10-10l-3 3m0 0l3 3m-3-3h-7a3 3 0 00-3 3V17a3 3 0 003 3h7m0-18a3 3 0 00-3-3H7a3 3 0 00-3 3v18a3 3 0 003 3h10a3 3 0 003-3V7z" />
+                </svg>
+                <a href="https://github.com/Shivananda8051" target="_blank" rel="noopener noreferrer" class="info-link">
+                    GitHub Profile
+                </a>
+            </div>
+            <div class="info-item">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="info-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 0l-5.7 3.8a2 2 0 01-2.22 0L3 8m0 0v10a2 2 0 002 2h14a2 2 0 002-2V8z" />
+                </svg>
+                <span class="info-text">Email: skupnoor@gitam.in</span>
+            </div>
+            <div class="info-item">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="info-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-2 2l-2 2m0-2l2 2m0-2v10m0-10V20" />
+                </svg>
+                <span class="info-text">Mobile: +91 8147038051</span>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="bg-blue-100 py-10 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-blue-700 mb-6 text-center">Contact Me</h2>
+            <form class="max-w-md mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+                    <input type="text" id="name" name="name"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                    <input type="email" id="email" name="email"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
+                    <textarea id="message" name="message"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+                <button type="submit"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Send
+                    Message</button>
+            </form>
+        </div>
+    </section>
+    <footer class="bg-gray-800 text-white py-4 text-center rounded-md">
+        <p>© 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Basic form validation
+        document.querySelector('form').addEventListener('submit', function (event) {
+            let name = document.getElementById('name').value.trim();
+            let email = document.getElementById('email').value.trim();
+            let message = document.getElementById('message').value.trim();
+
+            if (name === "") {
+                alert("Name is required");
+                event.preventDefault();
+            }
+            if (email === "") {
+                alert("Email is required");
+                event.preventDefault();
+            }
+            if (message === "") {
+                alert("Message is required");
+                event.preventDefault();
+            }
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

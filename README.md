@@ -6,6 +6,7 @@ Welcome to my portfolio! I’m **Shivananda Kupnoor**, a passionate Full Stack D
 
 I am a growth-oriented developer with expertise in both front-end and back-end development. My mission is to build solutions that solve real-world problems while prioritizing accessibility, sustainability, and scalability.
 
+Demo : https://statuesque-bubblegum-355f42.netlify.app/
 ---
 
 ## 🔹 Skills & Technologies
